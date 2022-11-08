@@ -25,6 +25,7 @@
           height="40"
           color="#C7493A"
           outlined
+          to="/reg" nuxt
         >Регистрация</v-btn>
     </div>
 

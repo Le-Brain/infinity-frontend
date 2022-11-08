@@ -57,7 +57,7 @@
         show2: true,
         show3: false,
         show4: false,
-        password: '------------',
+        password: 'Password',
         rules: {
           required: value => !!value || 'Required.',
           min: v => v.length >= 8 || 'Min 8 characters',
@@ -106,6 +106,12 @@
     margin-bottom: 45px;
   }
 
+  .log__footnote {
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    padding-top: 48px;
+    margin-top: 40px;
+  }
+
   // ==================================== Стили form =======================================
   .v-form {
     background-color: #110F0F;
@@ -113,7 +119,7 @@
     margin: auto;
   }
 
-  .v-form > div:not(:last-child) {
+  .v-form > div:nth-child(-n+2) {
     margin-bottom: 55px;
   }
 
