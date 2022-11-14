@@ -3,14 +3,11 @@
   <div class="main">
 
     <div class="main__title">
-      <InfinityLogo :maxWidth="200"/>
+      <InfinityLogo/>
       <h2 class="main__text"><span class="main__text-color">Вас приветствует</span> INFINITY</h2>
     </div>
 
-    <MainImage
-      :maxWidth="878"
-      :maxHeight="699"
-    />
+    <MainImage/>
 
     <div class="main__log">
         <v-btn
@@ -36,10 +33,15 @@
 
 <script lang="ts">
   import PrimaryLine from "@/assets/img/line.svg"
+  import MainImage from "@/assets/img/main.svg"
+  import InfinityLogo from "@/assets/img/logo.svg"
+
   export default {
-    name: 'IndexPage',
+    name: 'MainPage',
     components: {
-      PrimaryLine
+      PrimaryLine,
+      MainImage,
+      InfinityLogo
     }
   }
 </script>

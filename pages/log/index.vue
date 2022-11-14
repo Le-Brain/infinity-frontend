@@ -36,21 +36,27 @@
             ></v-switch>
             <v-btn
               class="btn"
-              height="40"
+              height="64"
+              width="155"
               color="#C7493A"
               outlined
             >Войти</v-btn>
           </div>
-          <p class="log__footnote">Нет аккаунта Infinity? <a style="color: #C7493A" href="/reg">Зарегистрировать аккаунт</a></p>
         </v-form>
+        <p class="log__footnote">Нет аккаунта Infinity? <NuxtLink style="color: #C7493A" to="/reg">Зарегистрировать аккаунт</NuxtLink></p>
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import InfinityLogo from "@/assets/img/logo.svg"
+
   export default {
-    name: 'IndexPage',
+    name: 'LogPage',
+    components: {
+      InfinityLogo
+    },
     data () {
       return {
         show1: false,
@@ -70,10 +76,12 @@
 </script>
 
 <style lang="scss">
-  @import "./assets/variables.scss";
+  @import "@/assets/variables.scss";
 
   .log {
+    width: 100%;
     display: flex;
+    justify-content: center;
     background-color: $bg-color;
     margin-top: 30px;
   }
@@ -82,13 +90,16 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 35px;
+    padding: 35px 0 0 200px;
   }
 
   .log__options {
     display: flex;
     align-items: baseline;
-    justify-content: space-between;
+  }
+
+  .log__options div {
+    margin-right: 20px;
   }
 
   .login-form {
@@ -96,8 +107,8 @@
     max-height: 716px;
     background: #110F0F;
     border-bottom: 10px solid $primary-color;
-    padding: 50px 155px 80px 155px;
     margin-top: 90px;
+    padding: 50px 155px 80px 155px;
   }
 
   .log__title {
@@ -112,14 +123,19 @@
     margin-top: 40px;
   }
 
-  // ==================================== Стили form =======================================
-  .v-form {
-    background-color: #110F0F;
-    width: 448px;
-    margin: auto;
+  .login-form p, a {
+    margin-bottom: 0;
+    text-decoration: none;
   }
 
-  .v-form > div:nth-child(-n+2) {
+  // ==================================== Стили form =======================================
+  .login-form .v-form {
+    background-color: #110F0F;
+    margin: auto;
+    width: 448px;
+  }
+
+  .login-form .v-form > div:nth-child(-n+2) {
     margin-bottom: 55px;
   }
 
@@ -128,6 +144,11 @@
     height: 21px;
     width: 60px;
     border-radius: 10px
+  }
+
+  .v-application--is-ltr .v-input--switch.v-input--dense .v-input--selection-controls__ripple {
+    left: -10.5px;
+    top: -8.5px;
   }
 
   .v-input--switch.v-input--dense .v-input--switch__thumb {
@@ -149,6 +170,10 @@
   }
 
   .log__options .v-label {
+    font-size: 22px;
+  }
+
+  .log__options .v-btn__content {
     font-size: 24px;
   }
 // ===========================================================================================
