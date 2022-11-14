@@ -2,8 +2,13 @@
   <NuxtLink to="/main">To</NuxtLink>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   name: 'IndexPage',
 }
 </script>
+
+<style lang="scss">
+  @import "@/assets/variables.scss";
+
+</style>
