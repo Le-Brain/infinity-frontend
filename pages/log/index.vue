@@ -40,6 +40,7 @@
               width="155"
               color="#C7493A"
               outlined
+              to="/profile"
             >Войти</v-btn>
           </div>
         </v-form>
